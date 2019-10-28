@@ -1,0 +1,23 @@
+title: RegisterWscriptInRunKey
+status: experimental
+description: Registering wscript to autostart run key for dropped js/vbs 
+author: Joe Security
+date: 2019-10-23
+id: 200008
+threatname:
+behaviorgroup: 2
+classification: 8
+mitreattack:
+
+logsource:
+      product: windows
+      service: sysmon
+detection:
+      selection:
+          EventID: 13
+          TargetObject:
+              - '*\Microsoft\Windows\CurrentVersion\Run*'
+          Details:
+              - '*wscript.exe *'
+      condition: selection
+level: critical

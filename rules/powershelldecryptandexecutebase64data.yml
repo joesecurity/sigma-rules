@@ -1,0 +1,20 @@
+title: PowershellDecryptAndExecuteBase64Data
+status: experimental
+description: powershell decrypts and execute hardcoded base64 blob 
+author: Joe Security
+date: 2019-10-22
+id: 200006
+threatname:
+behaviorgroup: 1
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              -'*\powershell.exe* $* = [string][System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String(*;iex $*'
+      condition: selection
+level: critical

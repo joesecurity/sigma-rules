@@ -1,0 +1,21 @@
+title: DeleteShadowCopyViaPowershell
+status: experimental
+description: Delete Shadow Copy Via Powershell
+author: Joe Security
+date: 2019-10-25
+id: 200011
+threatname:
+behaviorgroup: 18
+classification: 8
+mitreattack: T1490
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*powershell*RwBlAHQALQBXAG0AaQBPAGIAagBlAGMAdAAgAFcAaQBuADMAMgBfAFMAaABhAGQAbwB3AGMAbwBwAHkAIAB8ACAARgBvAHIARQBhAGMAaAAtAE8AYgBqAGUAYwB0ACAAewAkAF8ALgBEAGUAbABlAHQAZQAoACkAOwB9AA==*'
+      condition: selection
+level: critical
+

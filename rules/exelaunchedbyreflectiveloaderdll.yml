@@ -1,0 +1,21 @@
+title: ExeLaunchedByReflectiveLoaderDll
+status: experimental
+description: exe launched by dll with ReflectiveLoader export function
+author: Joe Security
+date: 2019-10-18
+id: 200001
+threatname:
+behaviorgroup: 1
+classification: 5
+mitreattack: T1055
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:
+          ParentCommandLine: '*rundll32.exe C:\\*.dll,ReflectiveLoader*'
+          CommandLine:
+              -'*\\*.exe*'
+      condition: selection
+level: critical

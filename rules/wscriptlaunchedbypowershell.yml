@@ -1,0 +1,21 @@
+title: WScriptLaunchedByPowershell
+status: experimental
+description: powershell launches WScript, WScript executes file from startup
+author: Joe Security
+date: 2019-10-21
+id: 200004
+threatname:
+behaviorgroup: 1
+classification: 5
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          ParentCommandLine: '*\powershell.exe*'
+          CommandLine:
+              -'*\WScript.exe*\appdata\roaming\microsoft\word\startup\\*'
+      condition: selection
+level: critical
