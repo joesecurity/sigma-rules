@@ -1,0 +1,21 @@
+title: ScheduleVBSFromAppdata
+status: experimental
+description: Schedule vb script From Appdata
+author: Joe Security
+date: 2019-10-29
+id: 200012
+threatname:
+behaviorgroup: 2
+classification: 4
+mitreattack: T1053
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*\schtasks.exe* /create *wscript /E:vbscript *\AppData\Roaming\\*'
+      condition: selection
+level: critical
+
