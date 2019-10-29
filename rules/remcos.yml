@@ -1,0 +1,17 @@
+title: Remcos
+status: experimental
+description: detect log.dat of remcos
+author: Joe Security
+id: 200014
+threatname: Remcos
+behaviorgroup: 14,20,21,22
+classification: 4
+logsource:
+      service: sysmon
+      product: windows
+detection:
+    selection:
+        EventID: 11
+        TargetFilename: '*\AppData\Roaming\remcos\logs.dat*'			
+    condition: selection
+level: critical
