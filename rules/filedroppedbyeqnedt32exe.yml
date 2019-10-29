@@ -2,6 +2,7 @@ title: FileDroppedByEQNEDT32EXE
 status: experimental
 description: File dropped by EQNEDT32.EXE(CVE-2017-11882)
 author: Joe Security
+date: 2019-10-29
 id: 200013
 threatname:
 behaviorgroup: 25

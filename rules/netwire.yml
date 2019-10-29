@@ -1,0 +1,23 @@
+title: NetWire
+status: experimental
+description: NetWire auto-start registry entry
+author: Joe Security
+date: 2019-10-29
+id: 200015
+threatname: NetWire
+behaviorgroup: 14,20,21,22
+classification: 4
+mitreattack:
+
+logsource:
+      product: windows
+      service: sysmon
+detection:
+      selection:
+          EventID: 13
+          TargetObject:
+              - '*\Microsoft\Windows\CurrentVersion\Run*NetWire*'
+          Details:
+              - '*\AppData\Roaming\\*'
+      condition: selection
+level: critical

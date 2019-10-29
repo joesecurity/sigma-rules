@@ -2,6 +2,7 @@ title: Remcos
 status: experimental
 description: detect log.dat of remcos
 author: Joe Security
+date: 2019-10-29
 id: 200014
 threatname: Remcos
 behaviorgroup: 14,20,21,22
