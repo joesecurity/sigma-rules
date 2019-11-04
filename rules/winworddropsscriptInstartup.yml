@@ -14,12 +14,12 @@ detection:
         EventID: 11
         Image: '*\Microsoft Office\Office*\WINWORD.EXE*'
         TargetFilename:
-			- '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.vbs*'
-			- '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.js*'
-			- '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.bat*'
-			- '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.url*'
-			- '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.cmd*'
-			- '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.hta*'
+            - '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.vbs*'
+            - '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.js*'
+            - '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.bat*'
+            - '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.url*'
+            - '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.cmd*'
+            - '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.hta*'
             - '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.ps1*'
     condition: selection
 level: critical
