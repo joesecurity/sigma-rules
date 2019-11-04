@@ -19,5 +19,11 @@ detection:
               - '*\Microsoft\Windows\CurrentVersion\Run*NetWire*'
           Details:
               - '*\AppData\Roaming\\*'
-      condition: selection
+      selection1:
+          EventID: 13
+          TargetObject:
+              - '*HKEY_CURRENT_USER\Software\NetWire*HostId*'
+          Details:
+              - '*HostId-*'
+      condition: selection or selection1
 level: critical
