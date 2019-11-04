@@ -1,0 +1,25 @@
+title: WinwordDropsScriptInStartup
+status: experimental
+description: Winword.exe drops script file in startup location
+author: Joe Security
+id: 200017
+threatname:
+behaviorgroup: 1
+classification: 7
+logsource:
+      service: sysmon
+      product: windows
+detection:
+    selection:
+        EventID: 11
+        Image: '*\Microsoft Office\Office*\WINWORD.EXE*'
+        TargetFilename:
+			- '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.vbs*'
+			- '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.js*'
+			- '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.bat*'
+			- '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.url*'
+			- '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.cmd*'
+			- '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.hta*'
+            - '*\AppData\Roaming\Microsoft\Word\STARTUP\\*.ps1*'
+    condition: selection
+level: critical
