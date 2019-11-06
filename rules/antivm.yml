@@ -1,0 +1,20 @@
+title: AntiVM
+status: experimental
+description: Detect virtual environment "VirtualBox|VMware|KVM|HVM"  
+author: Joe Security
+date: 2019-11-06
+id: 200020
+threatname:
+behaviorgroup: 5
+classification: 8
+mitreattack: T1497
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*IlZpcnR1YWxCb3h8Vk13YXJlfEtWTXxIVk0i*'
+      condition: selection
+level: critical

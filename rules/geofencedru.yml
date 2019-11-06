@@ -1,0 +1,20 @@
+title: GeofencedRu
+status: experimental
+description: Detect region and exit if matched with harcoded country list Get-UICulture).Name -match "CN|RO|RU|UA|BY 
+author: Joe Security
+date: 2019-11-06
+id: 200019
+threatname:
+behaviorgroup: 8
+classification: 8
+mitreattack: T1241
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*R2V0LVVJQ3VsdHVyZSkuTmFtZSAtbWF0Y2ggIkNOfFJPfFJVfFVBfEJZI*'
+      condition: selection
+level: critical
