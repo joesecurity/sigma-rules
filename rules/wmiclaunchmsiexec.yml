@@ -1,0 +1,20 @@
+title: WmicLaunchMsiexec
+status: experimental
+description: Wmic launch msiexec to download file from internet
+author: Joe Security
+date: 2019-11-06
+id: 200018
+threatname:
+behaviorgroup: 10
+classification: 1
+mitreattack: T1218
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*wmic process call create *msiexec /i http* /q*'
+      condition: selection
+level: critical
