@@ -1,0 +1,20 @@
+title: Xmrig
+status: experimental
+description: Detect Xmrig
+author: Joe Security
+date: 2019-11-07
+id: 200021
+threatname:
+behaviorgroup: 5
+classification: 29
+mitreattack: 
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*-algo=cn-heavy/tube -o bittube.herominers.com:10281 -u*'
+      condition: selection
+level: critical
