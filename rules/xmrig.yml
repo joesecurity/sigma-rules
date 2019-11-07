@@ -5,8 +5,8 @@ author: Joe Security
 date: 2019-11-07
 id: 200021
 threatname:
-behaviorgroup: 5
-classification: 29
+behaviorgroup: 29
+classification: 9
 mitreattack: 
 
 logsource:
