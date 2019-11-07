@@ -15,6 +15,6 @@ logsource:
 detection:
       selection:      
           CommandLine:
-              - '*-algo=cn-heavy/tube -o bittube.herominers.com:10281 -u*'
+              - '*-algo=* -o *miner* -u*'
       condition: selection
 level: critical
