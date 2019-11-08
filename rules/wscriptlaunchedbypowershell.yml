@@ -1,4 +1,4 @@
-title: WScriptLaunchedByPowershell
+title: WScript Launched By Powershell
 status: experimental
 description: powershell launches WScript, WScript executes file from startup
 author: Joe Security

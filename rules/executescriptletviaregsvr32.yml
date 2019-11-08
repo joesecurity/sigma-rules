@@ -1,4 +1,4 @@
-title: ExecuteScriptletViaRegsvr32
+title: Execute Scriptlet Via Regsvr32
 status: experimental
 description:  regsvr32.exe to execute a COM scriptlet
 author: Joe Security

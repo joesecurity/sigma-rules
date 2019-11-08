@@ -1,4 +1,4 @@
-title: MSBuildLaunchedByScr
+title: MSBuild Launched By Scr
 status: experimental
 description: Code injection in msbuild.exe by .scr file
 author: Joe Security

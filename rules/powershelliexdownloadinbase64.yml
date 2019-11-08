@@ -1,4 +1,4 @@
-title: PowershellIEXDownloadInBase64
+title: Powershell IEX Download In Base64
 status: experimental
 description: powershell IEX((new-object net.webclient).downloadstring( string in base64 form
 author: Joe Security
