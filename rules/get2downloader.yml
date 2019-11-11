@@ -14,7 +14,9 @@ logsource:
 detection:
     selection:
         EventID: 11
-        Image: '*\Microsoft Office\Office*'
+        Image:
+            - '*\Microsoft Office\Office*'
+            - '*\Microsoft Office\root\Office*'
         TargetFilename: '*Temp\oleObject1.bin'
     condition: selection
 level: critical
