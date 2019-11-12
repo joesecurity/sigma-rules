@@ -1,0 +1,21 @@
+title: RegAsm connects to smtp port
+status: experimental
+description: RegAsm connects to smtp port 
+author: Joe Security
+date: 2019-11-12
+id: 200026
+threatname:
+behaviorgroup: 12
+classification: 1
+mitreattack: 
+
+logsource:
+      service: sysmon
+      product: windows
+detection:
+      selection:
+          EventID: 3
+          DestinationPort: '587'
+          Image: '*\Microsoft.NET\\*RegAsm.exe*'
+      condition: selection
+level: critical
