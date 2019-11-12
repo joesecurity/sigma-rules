@@ -1,0 +1,21 @@
+title: EQNEDT32.EXE connecting to internet 
+status: experimental
+description: EQNEDT32.EXE connecting to internet
+author: Joe Security
+date: 2019-11-12
+id: 200027
+threatname:
+behaviorgroup: 25
+classification: 7
+mitreattack: 
+
+logsource:
+      service: sysmon
+      product: windows
+detection:
+      selection:
+          EventID: 3
+          DestinationPort: '80'
+          Image: '*\EQUATION\EQNEDT32.EXE*'
+      condition: selection
+level: critical
