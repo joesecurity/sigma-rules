@@ -16,5 +16,6 @@ detection:
       selection:      
           CommandLine:
               - '*-algo=* -o *miner* -u*'
+              - '*cryptonight --url=xmr.*'
       condition: selection
 level: critical
