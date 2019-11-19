@@ -13,6 +13,6 @@ logsource:
 detection:
     selection:
         EventID: 11
-        TargetFilename: '*\AppData\Roaming\remcos\logs.dat*'			
+        TargetFilename: '*\AppData\Roaming\remcos\logs*.dat*'			
     condition: selection
 level: critical
