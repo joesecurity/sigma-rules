@@ -1,6 +1,6 @@
 title: Remcos
 status: experimental
-description: detect log.dat of remcos
+description: detect log.dat of remcos and registry entry
 author: Joe Security
 date: 2019-10-29
 id: 200014
@@ -13,6 +13,12 @@ logsource:
 detection:
     selection:
         EventID: 11
-        TargetFilename: '*\AppData\Roaming\remcos\logs*.dat*'			
-    condition: selection
+        TargetFilename:
+            - '*\AppData\Roaming\remcos\logs*.dat*'
+		    
+    selection1:
+        EventID: 13
+        TargetObject:
+            - '*\Software\Remcos*exepath*'		
+    condition: selection or selection1
 level: critical
