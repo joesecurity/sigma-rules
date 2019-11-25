@@ -1,0 +1,20 @@
+title: bitsadmin download and execute
+status: experimental
+description: Detect bitsadmin download and execute activity
+author: Joe Security
+date: 2019-11-25
+id: 200031
+threatname:
+behaviorgroup: 1
+classification: 8
+mitreattack: 
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*bitsadmin /transfer*http*start %APPDATA%*'
+      condition: selection
+level: critical
