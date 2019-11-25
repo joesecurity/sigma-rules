@@ -1,0 +1,20 @@
+title: Powershell download and load assembly 
+status: experimental
+description: Detect powershell download and load assembly 
+author: Joe Security
+date: 2019-11-25
+id: 200030
+threatname:
+behaviorgroup: 1
+classification: 8
+mitreattack: 
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*powershell*Downloadstring(*.Load([Convert]::Frombase64String(*'
+      condition: selection
+level: critical
