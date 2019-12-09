@@ -1,0 +1,20 @@
+title: Steal Google chrome login data
+status: experimental
+description: Steal Google chrome login data
+author: Joe Security
+date: 2019-12-09
+id: 200036
+threatname:
+behaviorgroup: 20
+classification: 4
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*/c copy*\appdata\local\google\chrome\user data\default\login data*\appdata\local\temp\db1*'
+      condition: selection
+level: critical
