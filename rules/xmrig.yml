@@ -17,6 +17,7 @@ detection:
           CommandLine:
               - '*-algo=* -o *miner* -u*'
               - '*cryptonight --url=xmr.*'
-              - '*/xmr -M stratum+tcp://*'
+              - '*stratum+tcp://*'
+              - '*--algo=cn*-o * -u *'
       condition: selection
 level: critical

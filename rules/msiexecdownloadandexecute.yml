@@ -1,0 +1,20 @@
+title: msiexec download and execute
+status: experimental
+description: msiexec download and execute
+author: Joe Security
+date: 2019-12-16
+id: 200037
+threatname:
+behaviorgroup: 10
+classification: 1
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*msiexec*/i http* /q OnLoad=*'
+      condition: selection
+level: critical
