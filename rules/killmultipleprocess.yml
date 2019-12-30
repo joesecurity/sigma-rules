@@ -1,0 +1,20 @@
+title: Kill multiple process
+status: experimental
+description: Kill multiple process
+author: Joe Security
+date: 2019-12-30
+id: 200039
+threatname:
+behaviorgroup: 18
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*cmd*taskkill /f*& taskkill /f*& taskkill /f*& taskkill /f*& taskkill /f*& taskkill /f*& taskkill /f*'
+      condition: selection
+level: critical
