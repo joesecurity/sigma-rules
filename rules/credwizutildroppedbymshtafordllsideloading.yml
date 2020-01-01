@@ -1,0 +1,22 @@
+title: Credwiz util dropped by mshta for dll sideloading
+status: experimental
+description: Credwiz util dropped by mshta for dll sideloading
+author: Joe Security
+date: 2020-01-01
+id: 200041
+threatname:
+behaviorgroup: 7
+classification: 8
+mitreattack: T1073
+
+logsource:
+      service: sysmon
+      product: windows
+detection:
+    selection:
+        EventID: 11
+        Image: '*\mshta.exe*'
+        TargetFilename:
+            - '*\credwiz.exe*'
+    condition: selection
+level: critical
