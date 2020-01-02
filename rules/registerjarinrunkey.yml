@@ -15,6 +15,6 @@ logsource:
 detection:
       selection:      
           CommandLine:
-              - '*reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Run /v *java*\AppData\Roaming\\*.jar*'
+              - '*reg add *\Software\Microsoft\Windows\CurrentVersion\Run /v *\AppData\Roaming\\*.jar*'
       condition: selection
 level: critical
