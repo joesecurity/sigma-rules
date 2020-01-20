@@ -1,6 +1,6 @@
 title: Ryuk
 status: experimental
-description: Ryuk sending magic packet on port 7
+description: Ryuk sending magic Wake-On-Lan packet on port 7
 author: Joe Security
 date: 2020-01-14
 id: 200042
