@@ -15,6 +15,6 @@ logsource:
 detection:
       selection:      
           CommandLine:
-              - '*wmic process list /format:*\\*.xsl*'
+              - '*wmic process list /format:*.xsl*'
       condition: selection
 level: critical
