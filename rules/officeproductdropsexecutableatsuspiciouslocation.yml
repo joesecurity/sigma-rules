@@ -1,0 +1,24 @@
+title: Office product drops executable at suspicious location
+status: experimental
+description: Office product drops executable at suspicious location
+author: Joe Security
+date: 2020-01-30
+id: 200046
+threatname:
+behaviorgroup: 1
+classification: 7
+logsource:
+      service: sysmon
+      product: windows
+detection:
+    selection:
+        EventID: 11
+        Image: 
+            - '*\Microsoft Office*\Office*\WINWORD.EXE*'
+            - '*\Microsoft Office*\Office*\EXCEL.EXE*'
+        TargetFilename:
+            - '*\Documents\\*.exe*'
+            - '*\Documents\\*.dll*'
+            - '*\Documents\\*.scr*'
+    condition: selection
+level: critical
