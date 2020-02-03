@@ -1,0 +1,20 @@
+title: Dot net compiler compiles file from suspicious location
+status: experimental
+description: Dot net compiler compiles file from suspicious location
+author: Joe Security
+date: 2020-02-03
+id: 200048
+threatname:
+behaviorgroup: 1
+classification: 7
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*\windows\microsoft.net\framework*\csc.exe*/noconfig /fullpaths*\appdata\local\temp*'
+      condition: selection
+level: critical
