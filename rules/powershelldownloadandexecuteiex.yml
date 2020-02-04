@@ -15,6 +15,8 @@ logsource:
 detection:
       selection:      
           CommandLine:
-              -'*\powershell.exe* iex *((New-Object Net.WebClient).DownloadString(*'
+              - '*\powershell.exe* iex *((New-Object Net.WebClient).DownloadString(*'
+              - '*powershell*[string][char[]]@(0x*Set-Alias*Net.WebClient*.DownloadString(*'
+              - '*powershell*iex (new-object system.net.webclient).downloadstring*'
       condition: selection
 level: critical
