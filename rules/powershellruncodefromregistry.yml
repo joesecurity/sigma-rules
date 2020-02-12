@@ -1,0 +1,21 @@
+title: Powershell run code from registry
+status: experimental
+description: Powershell run code from registry
+author: Joe Security
+date: 2020-02-12
+id: 200051
+threatname:
+behaviorgroup: 1
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*powershell*iex(get-itemproperty hkcu*'
+              - '*powershell*iex(get-itemproperty khlm*'
+      condition: selection
+level: critical
