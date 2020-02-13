@@ -1,0 +1,20 @@
+title: Copy itself to suspicious location via type command 
+status: experimental
+description: Copy itself to suspicious location via type command
+author: Joe Security
+date: 2020-02-13
+id: 200052
+threatname:
+behaviorgroup: 10
+classification: 1
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*cmd*type*>*\AppData*'
+      condition: selection
+level: critical
