@@ -1,0 +1,20 @@
+title: Powershell launch wscript
+status: experimental
+description: Powershell launch wscript
+author: Joe Security
+date: 2020-02-17
+id: 200053
+threatname:
+behaviorgroup: 10
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*powershell*wscript.shell*.run(*wscript.exe /e:*'
+      condition: selection
+level: critical
