@@ -1,0 +1,20 @@
+title: Wmic download via msiexec
+status: experimental
+description: Wmic download via msiexec
+author: Joe Security
+date: 2020-02-17
+id: 200055
+threatname:
+behaviorgroup: 10
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*wmic process call create *msiexec *http*'
+      condition: selection
+level: critical
