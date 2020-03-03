@@ -1,0 +1,20 @@
+title: Powershell launch wmic via class
+status: experimental
+description: Powershell launch wmic via class
+author: Joe Security
+date: 2020-03-03
+id: 200058
+threatname:
+behaviorgroup: 7
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*powershell*[wmiclass]*'
+      condition: selection
+level: critical
