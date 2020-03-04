@@ -1,0 +1,20 @@
+title: AppLocker Bypass via Regsvr32
+status: experimental
+description: AppLocker Bypass via Regsvr32
+author: Joe Security
+date: 2020-03-04
+id: 200059
+threatname:
+behaviorgroup: 5
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*regsvr32*/s /u /n /i:http*scrobj*'
+      condition: selection
+level: critical
