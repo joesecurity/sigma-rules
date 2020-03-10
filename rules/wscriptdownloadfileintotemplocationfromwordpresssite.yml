@@ -1,0 +1,20 @@
+title: Wscript download file into temp location from wordpress site
+status: experimental
+description: Wscript download file into temp location from wordpress site
+author: Joe Security
+date: 2020-03-10
+id: 200061
+threatname: 
+behaviorgroup: 10
+classification: 1
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - *cmd /c wscript.exe *\AppData\Local\Temp*/wp-data/*              
+      condition: selection
+level: critical
