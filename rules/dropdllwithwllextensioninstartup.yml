@@ -1,0 +1,19 @@
+title: Drop dll with wll extension in startup
+status: experimental
+description: Drop dll with wll extension in startup
+author: Joe Security
+date: 2020-03-16
+id: 200064
+threatname:
+behaviorgroup: 2
+classification: 8
+logsource:
+      service: sysmon
+      product: windows
+detection:
+    selection:
+        EventID: 11
+        TargetFilename:
+            - '*\appdata\roaming\microsoft\\*\startup\\*.wll*'            
+    condition: selection
+level: critical
