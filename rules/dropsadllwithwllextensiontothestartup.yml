@@ -1,6 +1,6 @@
-title: Drop dll with wll extension in startup
+title: Drops a DLL with WLL extension to the startup
 status: experimental
-description: Drop dll with wll extension in startup
+description: Drops a DLL with WLL extension to the startup
 author: Joe Security
 date: 2020-03-16
 id: 200064
