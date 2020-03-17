@@ -16,5 +16,6 @@ detection:
       selection:      
           CommandLine:
               - '*bitsadmin /transfer*http*start %APPDATA%*'
+              - '*/transfer*http*.dll&& rundll32*'
       condition: selection
 level: critical
