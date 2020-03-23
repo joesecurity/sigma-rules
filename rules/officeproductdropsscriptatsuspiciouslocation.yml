@@ -25,5 +25,13 @@ detection:
             - '*\AppData\Roaming\\*.cmd*'
             - '*\AppData\Roaming\\*.hta*'
             - '*\AppData\Roaming\\*.ps1*'
+            - '*\AppData\Local\Temp\\*.vbs*'
+            - '*\AppData\Local\Temp\\*.js*'
+            - '*\AppData\Local\Temp\\*.jse*'
+            - '*\AppData\Local\Temp\\*.bat*'
+            - '*\AppData\Local\Temp\\*.url*'
+            - '*\AppData\Local\Temp\\*.cmd*'
+            - '*\AppData\Local\Temp\\*.hta*'
+            - '*\AppData\Local\Temp\\*.ps1*'
     condition: selection
 level: critical
