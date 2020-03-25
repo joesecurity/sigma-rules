@@ -16,5 +16,6 @@ detection:
       selection:      
           CommandLine:
               -'*\powershell*DownloadFile((*),$*))*start-process $*'
+              -'*powershell*downloadfile(*;start-process*'
       condition: selection
 level: critical
