@@ -1,0 +1,20 @@
+title: Powershell load assembly from registry
+status: experimental
+description: Powershell load assembly from registry
+author: Joe Security
+date: 2020-04-03
+id: 200070
+threatname:
+behaviorgroup: 1
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*[Reflection.Assembly]::Load((ItemProperty */Software*'
+      condition: selection
+level: critical
