@@ -1,0 +1,26 @@
+title: Drops script at startup location
+status: experimental
+description: Drops script at startup location
+author: Joe Security
+date: 2020-04-07
+id: 200071
+threatname:
+behaviorgroup: 1
+classification: 7
+logsource:
+      service: sysmon
+      product: windows
+detection:
+    selection:
+        EventID: 11        
+        TargetFilename:            
+            - '*\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\\*.vbs*'
+            - '*\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\\*.js*'
+            - '*\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\\*.jse*'
+            - '*\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\\*.bat*'
+            - '*\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\\*.url*'
+            - '*\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\\*.cmd*'
+            - '*\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\\*.hta*'
+            - '*\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\\*.ps1*'
+    condition: selection
+level: critical
