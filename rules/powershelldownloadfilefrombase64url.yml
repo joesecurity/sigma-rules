@@ -1,0 +1,20 @@
+title: Powershell download file from base64 url
+status: experimental
+description: Powershell download file from base64 url
+author: Joe Security
+date: 2020-04-13
+id: 200072
+threatname:
+behaviorgroup: 1
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:
+          CommandLine:
+              - '*.downloadfile([system.text.encoding]::ascii.getstring([system.convert]::frombase64string(*'
+      condition: selection
+level: critical
