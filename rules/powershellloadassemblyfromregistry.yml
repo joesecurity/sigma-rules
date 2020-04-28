@@ -16,5 +16,6 @@ detection:
       selection:      
           CommandLine:
               - '*[Reflection.Assembly]::Load((ItemProperty */Software*'
+              - '*[system.threading.thread]::getdomain().load((itemproperty hk*'
       condition: selection
 level: critical
