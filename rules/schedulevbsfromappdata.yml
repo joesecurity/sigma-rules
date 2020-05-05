@@ -16,6 +16,8 @@ detection:
       selection:      
           CommandLine:
               - '*\schtasks.exe* /create *wscript /E:vbscript *\AppData\Roaming\\*'
+              - '*schtasks /create *\appdata\roaming\\*.vbs*'
+              - '*schtasks /create *\appdata\roaming\\*.js*'
       condition: selection
 level: critical
 
