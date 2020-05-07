@@ -15,6 +15,6 @@ logsource:
 detection:
       selection:      
           CommandLine:
-              - '*\mshta.EXE *pastebin.com\\*'
+              - '*\mshta.exe*pastebin.com\\*'
       condition: selection
 level: critical
