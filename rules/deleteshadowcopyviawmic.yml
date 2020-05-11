@@ -1,0 +1,20 @@
+title: Delete shadow copy via WMIC
+status: experimental
+description: Delete shadow copy via WMIC
+author: Joe Security
+date: 2020-05-11
+id: 200076
+threatname:
+behaviorgroup: 18
+classification: 0
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:
+          CommandLine:
+              - '*wmic*shadowcopy delete*'              
+      condition: selection
+level: critical
