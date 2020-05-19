@@ -22,5 +22,6 @@ detection:
               - '*powershell*.DownloadFile([System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String(*>&*'
               - '*iex (new-object net.webclient).downloadstring(*'
               - '*powershell -command iex (*downloadstring*'
+              - '*iex (new-object net.webclient).downloadfile(*'
       condition: selection
 level: critical
