@@ -33,5 +33,13 @@ detection:
             - '*\AppData\Local\Temp\\*.cmd*'
             - '*\AppData\Local\Temp\\*.hta*'
             - '*\AppData\Local\Temp\\*.ps1*'
-    condition: selection
+    selection1:
+        EventID: 11
+        Image: 
+            - '*\Microsoft Office*\Office*\WINWORD.EXE*'
+            - '*\Microsoft Office*\Office*\EXCEL.EXE*'
+        TargetFilename:
+            - '*\AppData\Roaming\Microsoft\Office\Recent\\*.url*'
+        
+    condition: selection and not selection1
 level: critical
