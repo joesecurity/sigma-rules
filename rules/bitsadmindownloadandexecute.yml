@@ -17,5 +17,6 @@ detection:
           CommandLine:
               - '*bitsadmin /transfer*http*start %APPDATA%*'
               - '*/transfer*http*.dll&& rundll32*'
+              - '*powershell*start-bitstransfer*start-process*'
       condition: selection
 level: critical
