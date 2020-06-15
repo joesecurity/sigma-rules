@@ -1,0 +1,20 @@
+title: Powershell execute code from registry
+status: experimental
+description: Powershell execute code from registry
+author: Joe Security
+date: 2020-06-15
+id: 200079
+threatname:
+behaviorgroup: 5
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:
+          CommandLine:
+              - '*(gp hkcu:\software).*)|iex*'
+      condition: selection
+level: critical
