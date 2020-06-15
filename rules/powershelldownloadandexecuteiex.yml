@@ -24,5 +24,6 @@ detection:
               - '*powershell -command iex (*downloadstring*'
               - '*iex (new-object net.webclient).downloadfile(*'
               - '*powershell*-command*iex(*http*'
+              - '*-command iex (new-object*downloadstring*'
       condition: selection
 level: critical
