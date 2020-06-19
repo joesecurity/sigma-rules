@@ -20,5 +20,8 @@ detection:
             - '*\Documents\\*.exe*'
             - '*\Documents\\*.dll*'
             - '*\Documents\\*.scr*'
+            - '*\AppData\Local\Temp\\*.exe*'
+            - '*\AppData\Local\Temp\\*.dll*'
+            - '*\AppData\Local\Temp\\*.scr*'
     condition: selection
 level: critical
