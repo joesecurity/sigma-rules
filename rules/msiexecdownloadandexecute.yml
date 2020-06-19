@@ -17,5 +17,6 @@ detection:
           CommandLine:
               - '*msiexec*/i http* /q OnLoad=*'
               - '*m^sie^xec /ih^tt^p*>*'
+              - '*m^s^ie^xec /ih^tt^p^*'
       condition: selection
 level: critical
