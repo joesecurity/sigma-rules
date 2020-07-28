@@ -16,5 +16,6 @@ detection:
       selection:      
           CommandLine:
               - '*\mshta.exe*pastebin.com\\*'
+              - '*mshta.exe*pastebin.com\raw*'
       condition: selection
 level: critical
