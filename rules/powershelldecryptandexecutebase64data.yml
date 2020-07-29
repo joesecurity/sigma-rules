@@ -15,6 +15,7 @@ logsource:
 detection:
       selection:      
           CommandLine:
-              -'*\powershell.exe* $* = [string][System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String(*;iex $*'
+              - '*\powershell.exe* $* = [string][System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String(*;iex $*'
+              - '*FromBase64String(*;IEX (*'
       condition: selection
 level: critical
