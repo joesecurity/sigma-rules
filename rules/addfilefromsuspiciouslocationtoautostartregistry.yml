@@ -15,6 +15,7 @@ logsource:
 detection:
       selection:      
           CommandLine:
-              - '*reg add *\windows\currentversion\run /f /v *\appdata\roaming*'              
+              - '*reg add *\windows\currentversion\run /f /v *\appdata\roaming*'
+              - '*reg add *\windows\currentversion\run /v *\appdata\local*'
       condition: selection
 level: critical
