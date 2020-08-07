@@ -1,0 +1,21 @@
+title: IcedID Downloader
+status: experimental
+description: IcedID Downloader
+author: Joe Security
+date: 2020-08-07
+id: 200083
+threatname:
+behaviorgroup: 20
+classification: 4
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*\programdata\1.exe /urlcache /f http*.php?*.cab c:\programdata\1.tmp*'
+              
+      condition: selection
+level: critical
