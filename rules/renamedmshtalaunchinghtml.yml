@@ -1,0 +1,21 @@
+title: Renamed MSHTA launching html
+status: experimental
+description: Renamed MSHTA launching html
+author: Joe Security
+date: 2020-08-20
+id: 200085
+threatname:
+behaviorgroup: 5
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*\calc.com *\\*.html*'
+              
+      condition: selection
+level: critical
