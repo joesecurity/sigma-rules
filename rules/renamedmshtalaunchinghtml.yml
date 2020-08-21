@@ -15,7 +15,7 @@ logsource:
 detection:
       selection:      
           CommandLine:
-              - '*\calc.com *\\*.html*'
+              - '*\public\\*.com *\\*.html*'
               
       condition: selection
 level: critical
