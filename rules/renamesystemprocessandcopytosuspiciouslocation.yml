@@ -1,0 +1,22 @@
+title: Rename system process and copy to suspicious location
+status: experimental
+description: Rename system process and copy to suspicious location
+author: Joe Security
+date: 2020-09-18
+id: 200087
+threatname:
+behaviorgroup: 5
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*/c copy /z c:\windows\syswow64\windowspowershell\v1.0\powershell.exe c:\users*'
+              - '*/c copy /z c:\windows\syswow64\bitsadmin.exe c:\users*'
+          
+      condition: selection
+level: critical
