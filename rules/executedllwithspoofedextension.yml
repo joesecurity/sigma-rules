@@ -20,6 +20,7 @@ detection:
               - '*rundll32*.txt,DllRegisterServer*'
               - '*rundll32*.png,DllRegisterServer*'
               - '*rundll32*.jpeg,DllRegisterServer*'
-              - '*rundll32*.jpg,DllRegisterServer*'              
+              - '*rundll32*.jpg,DllRegisterServer*'
+              - '*regsvr32 c:\programdata\\*.pdf*'
       condition: selection
 level: critical
