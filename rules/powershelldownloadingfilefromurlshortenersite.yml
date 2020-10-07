@@ -1,0 +1,25 @@
+title: Powershell downloading file from url shortener site
+status: experimental
+description: Powershell downloading file from url shortener site
+author: Joe Security
+date: 2020-10-07
+id: 200088
+threatname:
+behaviorgroup: 1
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*powershell*downloadfile*/tinyurl.*'
+              - '*powershell*downloadfile*/bitly.*'
+              - '*powershell*downloadfile*/shorturl.*'
+              - '*powershell*downloadfile*/rebrandly.*'
+              - '*powershell*downloadfile*/tinyurl.*'
+          
+      condition: selection
+level: critical
