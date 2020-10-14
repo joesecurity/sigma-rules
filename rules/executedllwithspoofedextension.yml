@@ -22,5 +22,6 @@ detection:
               - '*rundll32*.jpeg,DllRegisterServer*'
               - '*rundll32*.jpg,DllRegisterServer*'
               - '*regsvr32 c:\programdata\\*.pdf*'
+              - '*regsvr32 c:\programdata\\*.txt*'
       condition: selection
 level: critical
