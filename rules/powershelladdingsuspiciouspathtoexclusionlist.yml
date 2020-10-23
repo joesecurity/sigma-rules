@@ -1,0 +1,21 @@
+title: Powershell adding suspicious path to exclusion list
+status: experimental
+description: Powershell adding suspicious path to exclusion list
+author: Joe Security
+date: 2020-10-23
+id: 200089
+threatname:
+behaviorgroup: 5
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*powershell*add-mppreference -exclusionpath c:\programdata*'              
+          
+      condition: selection
+level: critical
