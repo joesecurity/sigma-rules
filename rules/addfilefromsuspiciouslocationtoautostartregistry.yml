@@ -17,5 +17,6 @@ detection:
           CommandLine:
               - '*reg add *\windows\currentversion\run /f /v *\appdata\roaming*'
               - '*reg add *\windows\currentversion\run /v *\appdata\local*'
+              - '*reg add *\software\microsoft\windows nt\currentversion\windows*/v load*appdata\roaming*'
       condition: selection
 level: critical
