@@ -19,7 +19,10 @@ detection:
               - '*powershell*downloadfile*/bitly.*'
               - '*powershell*downloadfile*/shorturl.*'
               - '*powershell*downloadfile*/rebrandly.*'
-              - '*powershell*downloadfile*/tinyurl.*'
+              - '*powershell*new-object net.*https://tinyurl.*'
+              - '*powershell*new-object net.*https://bitly.*'
+              - '*powershell*new-object net.*https://shorturl.*'
+              - '*powershell*new-object net.*https://rebrandly.*'
           
       condition: selection
 level: critical
