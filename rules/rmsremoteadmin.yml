@@ -1,0 +1,21 @@
+title: RMSRemoteAdmin
+status: experimental
+description: RMS RemoteAdmin tool
+author: Joe Security
+date: 2020-11-02
+id: 200090
+threatname: RMSRemoteAdmin
+behaviorgroup: 21
+classification: 4
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*hkcu\software\tektonit\remote manipulator system\host\parameters*'              
+          
+      condition: selection
+level: critical
