@@ -1,0 +1,21 @@
+title: ReflectiveLoader
+status: experimental
+description: ReflectiveLoader
+author: Joe Security
+date: 2020-11-12
+id: 200091
+threatname: ReflectiveLoader
+behaviorgroup: 1
+classification: 5
+mitreattack: T1055
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:          
+          CommandLine:
+              -'*.dll,_reflectiveloader*'
+              -'*.dll,reflectiveloader*'
+      condition: selection
+level: critical
