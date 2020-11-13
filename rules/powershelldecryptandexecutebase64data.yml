@@ -17,5 +17,6 @@ detection:
           CommandLine:
               - '*\powershell.exe* $* = [string][System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String(*;iex $*'
               - '*FromBase64String(*;IEX (*'
+              - '*frombase64string(*start-process $*'
       condition: selection
 level: critical
