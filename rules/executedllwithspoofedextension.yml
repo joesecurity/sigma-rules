@@ -25,6 +25,10 @@ detection:
               - '*regsvr32 c:\programdata\\*.txt*'
               - '*regsvr32 c:\users\public\\*.pdf*'
               - '*regsvr32 c:\users\public\\*.txt*'
+              - '*rundll32 c:\programdata\\*.pdf*'
+              - '*rundll32 c:\programdata\\*.txt*'
+              - '*rundll32 c:\users\public\\*.pdf*'
+              - '*rundll32 c:\users\public\\*.txt*'
               
       condition: selection
 level: critical
