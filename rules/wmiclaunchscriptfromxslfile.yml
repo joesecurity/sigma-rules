@@ -16,5 +16,6 @@ detection:
       selection:      
           CommandLine:
               - '*wmic process list /format:*.xsl*'
+              - '*wmic os get /format:*.xsl*'
       condition: selection
 level: critical
