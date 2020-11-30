@@ -16,5 +16,7 @@ detection:
       selection:      
           CommandLine:
               - '*powershell*Downloadstring(*.Load([Convert]::Frombase64String(*'
+              - '*).downloadstring(*[reflection.assembly]::load($*'
+              
       condition: selection
 level: critical
