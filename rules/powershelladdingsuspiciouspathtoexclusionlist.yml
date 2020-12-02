@@ -15,7 +15,8 @@ logsource:
 detection:
       selection:      
           CommandLine:
-              - '*powershell*add-mppreference -exclusionpath c:\programdata*'              
+              - '*powershell*add-mppreference -exclusionpath c:\programdata*'
+              - '*add-mppreference -exclusionpath*\appdata\roaming\microsoft\windows\start menu\programs\startup*'              
           
       condition: selection
 level: critical
