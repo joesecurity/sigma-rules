@@ -29,6 +29,8 @@ detection:
               - '*rundll32 c:\programdata\\*.txt*'
               - '*rundll32 c:\users\public\\*.pdf*'
               - '*rundll32 c:\users\public\\*.txt*'
+              - '*rundll32*\\*.pdf*'
+              - '*rundll32*\\*.txt*'              
               
       condition: selection
 level: critical
