@@ -23,6 +23,10 @@ detection:
               - '*powershell*new-object net.*https://bitly.*'
               - '*powershell*new-object net.*https://shorturl.*'
               - '*powershell*new-object net.*https://rebrandly.*'
+              - '*powershell*net.web*https://tinyurl.*
+              - '*powershell*net.web*https://bitly.*
+              - '*powershell*net.web*https://shorturl.*
+              - '*powershell*net.web*https://rebrandly.*
           
       condition: selection
 level: critical
