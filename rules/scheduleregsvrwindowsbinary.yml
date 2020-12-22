@@ -1,0 +1,20 @@
+title: Schedule REGSVR windows binary
+status: experimental
+description: Schedule REGSVR windows binary
+author: Joe Security
+date: 2020-12-22
+id: 200093
+threatname:
+behaviorgroup: 5
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:
+          CommandLine:
+              - '*schtasks*/create*regsvr32*'              
+      condition: selection
+level: critical
