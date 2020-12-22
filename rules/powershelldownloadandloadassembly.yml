@@ -17,6 +17,7 @@ detection:
           CommandLine:
               - '*powershell*Downloadstring(*.Load([Convert]::Frombase64String(*'
               - '*).downloadstring(*[reflection.assembly]::load($*'
+              - '*invoke-webrequest*[system.reflection.assembly]::loadfile($*'
               
       condition: selection
 level: critical
