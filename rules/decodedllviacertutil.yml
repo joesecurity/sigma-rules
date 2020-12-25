@@ -1,0 +1,20 @@
+title: Decode DLL Via Certutil
+status: experimental
+description: Decode DLL Via Certutil
+author: Joe Security
+date: 2020-12-25
+id: 200094
+threatname:
+behaviorgroup: 1
+classification: 8
+mitreattack: 
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*certutil*-decodehex*.dll*'
+      condition: selection
+level: critical
