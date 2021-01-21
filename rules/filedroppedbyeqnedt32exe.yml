@@ -15,11 +15,11 @@ detection:
         EventID: 11
         Image: '*\EQUATION\EQNEDT32.EXE*'
         TargetFilename:
-			- '*\\*.exe*'
-			- '*\\*.dll*'
-			- '*\\*.vbs*'
-			- '*\\*.js*'
-			- '*\\*.hta*'
-			- '*\\*.bat*'
+            - '*\\*.exe*'
+            - '*\\*.dll*'
+            - '*\\*.vbs*'
+            - '*\\*.js*'
+            - '*\\*.hta*'
+            - '*\\*.bat*'
     condition: selection
 level: critical
