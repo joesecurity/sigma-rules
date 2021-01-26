@@ -4,7 +4,7 @@ description: Powershell sleep and launch executable
 author: Joe Security
 date: 2020-03-17
 id: 200065
-threatname: 
+threatname:
 behaviorgroup: 5
 classification: 8
 mitreattack:
@@ -13,8 +13,8 @@ logsource:
       category: process_creation
       product: windows
 detection:
-      selection:      
+      selection:
           CommandLine:
-              - *powershell -c sleep -s *;saps *.exe*
+              - '*powershell -c sleep -s *;saps *.exe*'
       condition: selection
 level: critical

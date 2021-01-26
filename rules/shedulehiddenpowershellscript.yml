@@ -4,7 +4,7 @@ description: Shedule hidden powershell script
 author: Joe Security
 date: 2020-03-12
 id: 200063
-threatname: 
+threatname:
 behaviorgroup: 2
 classification: 8
 mitreattack:
@@ -13,8 +13,8 @@ logsource:
       category: process_creation
       product: windows
 detection:
-      selection:      
+      selection:
           CommandLine:
-              - *schtasks.exe*/create*powershell*hidden*
+              - '*schtasks.exe*/create*powershell*hidden*'
       condition: selection
 level: critical

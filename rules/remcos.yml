@@ -15,10 +15,10 @@ detection:
         EventID: 11
         TargetFilename:
             - '*\AppData\Roaming\remcos\logs*.dat*'
-		    
+
     selection1:
         EventID: 13
         TargetObject:
-            - '*\Software\Remcos*exepath*'		
+            - '*\Software\Remcos*exepath*'
     condition: selection or selection1
 level: critical

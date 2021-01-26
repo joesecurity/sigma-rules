@@ -13,7 +13,7 @@ logsource:
       category: process_creation
       product: windows
 detection:
-      selection:      
+      selection:
           CommandLine:
               - '*powershell*downloadfile*/tinyurl.*'
               - '*powershell*downloadfile*/bitly.*'
@@ -25,11 +25,11 @@ detection:
               - '*powershell*new-object net.*https://shorturl.*'
               - '*powershell*new-object net.*https://rebrandly.*'
               - '*powershell*new-object net.*https://cutt.*'
-              - '*powershell*net.web*https://tinyurl.*
-              - '*powershell*net.web*https://bitly.*
-              - '*powershell*net.web*https://shorturl.*
-              - '*powershell*net.web*https://rebrandly.*
+              - '*powershell*net.web*https://tinyurl.*'
+              - '*powershell*net.web*https://bitly.*'
+              - '*powershell*net.web*https://shorturl.*'
+              - '*powershell*net.web*https://rebrandly.*'
               - '*powershell*net.web*https://cutt.*'
-          
+
       condition: selection
 level: critical
