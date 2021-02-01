@@ -30,6 +30,12 @@ detection:
               - '*powershell*net.web*https://shorturl.*
               - '*powershell*net.web*https://rebrandly.*
               - '*powershell*net.web*https://cutt.*'
+              - '*powershell*invoke*tinyurl.*'
+              - '*powershell*invoke*bitly.*'
+              - '*powershell*invoke*shorturl.*'
+              - '*powershell*invoke*rebrandly.*'
+              - '*powershell*invoke*cutt.*'
+              
           
       condition: selection
 level: critical
