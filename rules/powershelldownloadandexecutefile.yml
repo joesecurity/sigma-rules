@@ -16,7 +16,7 @@ detection:
       selection:      
           CommandLine:
               - '*\powershell*DownloadFile((*),$*))*start-process $*'
-              - '*powershell*downloadfile(*;start-process*'
+              - '*.downloadfile*start-process*'
               - '*invoke-expression(new-object net.webclient*.invoke*'
       condition: selection
 level: critical
