@@ -1,0 +1,20 @@
+title: Check privilege of CMD via whoami
+status: experimental
+description: Check privilege of CMD via whoami
+author: Joe Security
+date: 2021-02-17
+id: 200097
+threatname:
+behaviorgroup: 8
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*whoami /groups | find*12288*'
+      condition: selection
+level: low
