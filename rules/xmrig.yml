@@ -19,6 +19,6 @@ detection:
               - '*cryptonight --url=xmr.*'
               - '*stratum+tcp://*'
               - '*--algo=cn*-o * -u *'
-              - '*--coin=monero --url=*'
+              - '*--coin=monero --*'
       condition: selection
 level: critical
