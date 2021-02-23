@@ -18,5 +18,6 @@ detection:
               - '*msiexec*/i http* /q OnLoad=*'
               - '*m^sie^xec /ih^tt^p*>*'
               - '*m^s^ie^xec /ih^tt^p^*'
+              - '*msiexec /q/ihttp*'
       condition: selection
 level: critical
