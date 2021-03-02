@@ -15,7 +15,7 @@ logsource:
 detection:
       selection:      
           CommandLine:
-              - '*hkcu\software\tektonit\remote manipulator system\host\parameters*'              
+              - '*hkcu\software\tektonit\remote manipulator system\host*'              
           
       condition: selection
 level: critical
