@@ -1,0 +1,21 @@
+title: Execute Scriptlet from internet Via Regsvr32
+status: experimental
+description:  regsvr32.exe to execute a COM scriptlet from internet
+author: Joe Security
+date: 2021-03-05
+id: 200099
+threatname:
+behaviorgroup: 2
+classification: 8
+mitreattack: T1218.010
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*regsvr32*http*scrobj*'
+      condition: selection
+level: critical
+
