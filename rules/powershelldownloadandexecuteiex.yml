@@ -27,5 +27,6 @@ detection:
               - '*-command iex (new-object*downloadstring*'
               - '*$path*iex(*.web*-replace*'
               - '*iex ((new-object system.net.webclient).downloadstring(*'
+              - '*powershell*.webclient)*iex*'
       condition: selection
 level: critical
