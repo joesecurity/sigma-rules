@@ -15,6 +15,6 @@ logsource:
 detection:
       selection:      
           CommandLine:
-              - '*wmic process call create *regsvr32*'
+              - '*wmic*process call create *regsvr32*'
       condition: selection
 level: critical
