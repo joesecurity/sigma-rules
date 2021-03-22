@@ -16,5 +16,6 @@ detection:
       selection:      
           CommandLine:
               - '*powershell*api.ipify.org*'
+              - '*invoke-webrequest -uri https://iplogger*'
       condition: selection
 level: critical
