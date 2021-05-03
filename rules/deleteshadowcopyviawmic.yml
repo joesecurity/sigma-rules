@@ -10,11 +10,11 @@ classification: 0
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:
-          CommandLine:
-              - '*wmic*shadowcopy delete*'              
-      condition: selection
+    selection:
+        CommandLine:
+            - '*wmic*shadowcopy delete*'
+    condition: selection
 level: critical

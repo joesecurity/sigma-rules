@@ -10,13 +10,13 @@ classification: 4
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*reg add *\windows\currentversion\run /f /v *\appdata\roaming*'
-              - '*reg add *\windows\currentversion\run /v *\appdata\local*'
-              - '*reg add *\software\microsoft\windows nt\currentversion\windows*/v load*appdata\roaming*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*reg add *\windows\currentversion\run /f /v *\appdata\roaming*'
+            - '*reg add *\windows\currentversion\run /v *\appdata\local*'
+            - '*reg add *\software\microsoft\windows nt\currentversion\windows*/v load*appdata\roaming*'
+    condition: selection
 level: critical

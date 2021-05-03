@@ -10,11 +10,11 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:
-          CommandLine:
-              - '*.downloadfile([system.text.encoding]::ascii.getstring([system.convert]::frombase64string(*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*.downloadfile([system.text.encoding]::ascii.getstring([system.convert]::frombase64string(*'
+    condition: selection
 level: critical

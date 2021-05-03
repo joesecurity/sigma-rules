@@ -10,15 +10,15 @@ classification: 9
 mitreattack: 
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*-algo=* -o *miner* -u*'
-              - '*cryptonight --url=xmr.*'
-              - '*stratum+tcp://*'
-              - '*--algo=cn*-o * -u *'
-              - '*--coin=monero --*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*-algo=* -o *miner* -u*'
+            - '*cryptonight --url=xmr.*'
+            - '*stratum+tcp://*'
+            - '*--algo=cn*-o * -u *'
+            - '*--coin=monero --*'
+    condition: selection
 level: critical

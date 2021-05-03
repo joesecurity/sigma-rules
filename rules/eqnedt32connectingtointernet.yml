@@ -10,12 +10,12 @@ classification: 7
 mitreattack: 
 
 logsource:
-      service: sysmon
-      product: windows
+    service: sysmon
+    product: windows
 detection:
-      selection:
-          EventID: 3
-          DestinationPort: '80'
-          Image: '*\EQUATION\EQNEDT32.EXE*'
-      condition: selection
+    selection:
+        EventID: 3
+        DestinationPort: '80'
+        Image: '*\EQUATION\EQNEDT32.EXE*'
+    condition: selection
 level: critical

@@ -10,11 +10,11 @@ classification: 1
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - *cmd /c wscript.exe *\AppData\Local\Temp*/wp-data/*              
-      condition: selection
+    selection:
+        CommandLine:
+            - *cmd /c wscript.exe *\AppData\Local\Temp*/wp-data/*
+    condition: selection
 level: critical

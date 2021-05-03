@@ -1,6 +1,6 @@
-title: Ryuk
+title: Wake-On-Lan
 status: experimental
-description: Ryuk sending magic Wake-On-Lan packet on port 7
+description: Sending magic Wake-On-Lan packet on port 7
 author: Joe Security
 date: 2020-01-14
 id: 200042

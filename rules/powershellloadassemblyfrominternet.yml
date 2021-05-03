@@ -10,11 +10,11 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*powershell*[reflection.assembly]::load((new-object net.webclient).downloaddata(*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*powershell*[reflection.assembly]::load((new-object net.webclient).downloaddata(*'
+    condition: selection
 level: critical

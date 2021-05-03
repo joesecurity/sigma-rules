@@ -10,11 +10,11 @@ classification: 1
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*cmd*type*>*\AppData*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*cmd*type*>*\AppData*'
+    condition: selection
 level: critical

@@ -10,12 +10,12 @@ classification: 6
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*powershell*api.ipify.org*'
-              - '*invoke-webrequest -uri https://iplogger*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*powershell*api.ipify.org*'
+            - '*invoke-webrequest -uri https://iplogger*'
+    condition: selection
 level: critical

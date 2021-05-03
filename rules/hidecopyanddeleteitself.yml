@@ -10,11 +10,11 @@ classification: 8
 mitreattack: 
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*attrib +s +h *timeout /t *del /f /q*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*attrib +s +h *timeout /t *del /f /q*'
+    condition: selection
 level: critical

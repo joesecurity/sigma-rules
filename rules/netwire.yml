@@ -10,18 +10,18 @@ classification: 4
 mitreattack:
 
 logsource:
-      product: windows
-      service: sysmon
+    product: windows
+    service: sysmon
 detection:
-      selection:
-          EventID: 13
-          TargetObject:
-              - '*\Microsoft\Windows\CurrentVersion\Run*NetWire*'
-          Details:
-              - '*\AppData\Roaming\\*'
-      selection1:
-          EventID: 13
-          TargetObject:
-              - '*HKEY_CURRENT_USER\Software\NetWire*HostId*'
-      condition: selection or selection1
+    selection:
+        EventID: 13
+        TargetObject:
+            - '*\Microsoft\Windows\CurrentVersion\Run*NetWire*'
+        Details:
+            - '*\AppData\Roaming\\*'
+    selection1:
+        EventID: 13
+        TargetObject:
+            - '*HKEY_CURRENT_USER\Software\NetWire*HostId*'
+    condition: selection or selection1
 level: critical

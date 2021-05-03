@@ -10,40 +10,38 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*powershell*downloadfile*/tinyurl.*'
-              - '*powershell*downloadfile*/bitly.*'
-              - '*powershell*downloadfile*/shorturl.*'
-              - '*powershell*downloadfile*/rebrandly.*'
-              - '*powershell*downloadfile*/cutt.*'
-              - '*powershell*downloadfile*/rebrand.*'
-              - '*powershell*downloadfile*/bit.ly*'
-              - '*powershell*new-object net.*https://tinyurl.*'
-              - '*powershell*new-object net.*https://bitly.*'
-              - '*powershell*new-object net.*https://shorturl.*'
-              - '*powershell*new-object net.*https://rebrandly.*'
-              - '*powershell*new-object net.*https://cutt.*'
-              - '*powershell*new-object net.*https://rebrand.*'
-              - '*powershell*new-object net.*https://bit.ly*'
-              - '*powershell*net.web*https://tinyurl.*
-              - '*powershell*net.web*https://bitly.*
-              - '*powershell*net.web*https://shorturl.*
-              - '*powershell*net.web*https://rebrandly.*
-              - '*powershell*net.web*https://cutt.*'
-              - '*powershell*net.web*https://rebrand.*'
-              - '*powershell*net.web*https://bit.ly*'
-              - '*powershell*invoke*tinyurl.*'
-              - '*powershell*invoke*bitly.*'
-              - '*powershell*invoke*shorturl.*'
-              - '*powershell*invoke*rebrandly.*'
-              - '*powershell*invoke*cutt.*'
-              - '*powershell*invoke*rebrand.*'
-              - '*powershell*invoke*bit.ly*'
-              
-          
-      condition: selection
+    selection:
+        CommandLine:
+            - '*powershell*downloadfile*/tinyurl.*'
+            - '*powershell*downloadfile*/bitly.*'
+            - '*powershell*downloadfile*/shorturl.*'
+            - '*powershell*downloadfile*/rebrandly.*'
+            - '*powershell*downloadfile*/cutt.*'
+            - '*powershell*downloadfile*/rebrand.*'
+            - '*powershell*downloadfile*/bit.ly*'
+            - '*powershell*new-object net.*https://tinyurl.*'
+            - '*powershell*new-object net.*https://bitly.*'
+            - '*powershell*new-object net.*https://shorturl.*'
+            - '*powershell*new-object net.*https://rebrandly.*'
+            - '*powershell*new-object net.*https://cutt.*'
+            - '*powershell*new-object net.*https://rebrand.*'
+            - '*powershell*new-object net.*https://bit.ly*'
+            - '*powershell*net.web*https://tinyurl.*
+            - '*powershell*net.web*https://bitly.*
+            - '*powershell*net.web*https://shorturl.*
+            - '*powershell*net.web*https://rebrandly.*
+            - '*powershell*net.web*https://cutt.*'
+            - '*powershell*net.web*https://rebrand.*'
+            - '*powershell*net.web*https://bit.ly*'
+            - '*powershell*invoke*tinyurl.*'
+            - '*powershell*invoke*bitly.*'
+            - '*powershell*invoke*shorturl.*'
+            - '*powershell*invoke*rebrandly.*'
+            - '*powershell*invoke*cutt.*'
+            - '*powershell*invoke*rebrand.*'
+            - '*powershell*invoke*bit.ly*'
+    condition: selection
 level: critical

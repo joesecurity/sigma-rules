@@ -10,12 +10,12 @@ classification: 5
 mitreattack: T1055
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:
-          ParentCommandLine: '*rundll32.exe C:\\*.dll,ReflectiveLoader*'
-          CommandLine:
-              -'*\\*.exe*'
-      condition: selection
+    selection:
+        ParentCommandLine: '*rundll32.exe C:\\*.dll,ReflectiveLoader*'
+        CommandLine:
+            -'*\\*.exe*'
+    condition: selection
 level: critical

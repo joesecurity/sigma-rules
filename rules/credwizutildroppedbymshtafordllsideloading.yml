@@ -7,11 +7,11 @@ id: 200041
 threatname:
 behaviorgroup: 7
 classification: 8
-mitreattack: T1073
+mitreattack: T1574.002
 
 logsource:
-      service: sysmon
-      product: windows
+    service: sysmon
+    product: windows
 detection:
     selection:
         EventID: 11

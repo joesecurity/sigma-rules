@@ -10,14 +10,14 @@ classification: 8
 mitreattack: 
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*powershell*Downloadstring(*.Load([Convert]::Frombase64String(*'
-              - '*).downloadstring(*[reflection.assembly]::load($*'
-              - '*invoke-webrequest*[system.reflection.assembly]::loadfile($*'
-              
-      condition: selection
+    selection:
+        CommandLine:
+            - '*powershell*Downloadstring(*.Load([Convert]::Frombase64String(*'
+            - '*).downloadstring(*[reflection.assembly]::load($*'
+            - '*invoke-webrequest*[system.reflection.assembly]::loadfile($*'
+            
+    condition: selection
 level: critical

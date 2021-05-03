@@ -9,8 +9,8 @@ threatname: Get2Downloader
 behaviorgroup: 2
 classification: 4
 logsource:
-      service: sysmon
-      product: windows
+    service: sysmon
+    product: windows
 detection:
     selection:
         EventID: 11

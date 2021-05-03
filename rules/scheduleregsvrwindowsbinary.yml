@@ -10,11 +10,11 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:
-          CommandLine:
-              - '*schtasks*/create*regsvr32*'              
-      condition: selection
+    selection:
+        CommandLine:
+            - '*schtasks*/create*regsvr32*'
+    condition: selection
 level: critical

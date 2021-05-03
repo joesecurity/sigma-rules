@@ -10,13 +10,13 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*powershell*add-mppreference -exclusionpath c:\programdata*'
-              - '*add-mppreference -exclusionpath*\appdata\roaming\microsoft\windows\start menu\programs\startup*'              
-          
-      condition: selection
+    selection:
+        CommandLine:
+            - '*powershell*add-mppreference -exclusionpath c:\programdata*'
+            - '*add-mppreference -exclusionpath*\appdata\roaming\microsoft\windows\start menu\programs\startup*'
+        
+    condition: selection
 level: critical

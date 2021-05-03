@@ -10,16 +10,16 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:              
-              - '*/e:jscript*\\*.txt*'
-              - '*/e:jscript*\\*.pdf*'
-              - '*/e:jscript*\\*.htm*'
-              - '*/e:jscript*\\*.png*'
-              - '*/e:jscript*\\*.jpeg*'
-              - '*/e:jscript*\\*.jpg*'              
-      condition: selection
+    selection:
+        CommandLine:
+            - '*/e:jscript*\\*.txt*'
+            - '*/e:jscript*\\*.pdf*'
+            - '*/e:jscript*\\*.htm*'
+            - '*/e:jscript*\\*.png*'
+            - '*/e:jscript*\\*.jpeg*'
+            - '*/e:jscript*\\*.jpg*'              
+    condition: selection
 level: critical

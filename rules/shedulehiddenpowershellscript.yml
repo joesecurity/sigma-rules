@@ -10,11 +10,11 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - *schtasks.exe*/create*powershell*hidden*
-      condition: selection
+    selection:
+        CommandLine:
+            - *schtasks.exe*/create*powershell*hidden*
+    condition: selection
 level: critical

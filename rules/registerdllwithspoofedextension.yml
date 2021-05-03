@@ -10,17 +10,16 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*rundll32*.html,DllRegisterServer*'
-              - '*regsvr32*\\*.jpg*
-              - '*regsvr32*\\*.png*
-              - '*regsvr32*\\*.jpeg*
-              - '*regsvr32*\\*.pdf*
-              - '*regsvr32*\\*.txt*'              
-              
-      condition: selection
+    selection:
+        CommandLine:
+            - '*rundll32*.html,DllRegisterServer*'
+            - '*regsvr32*\\*.jpg*
+            - '*regsvr32*\\*.png*
+            - '*regsvr32*\\*.jpeg*
+            - '*regsvr32*\\*.pdf*
+            - '*regsvr32*\\*.txt*'
+    condition: selection
 level: critical

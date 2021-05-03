@@ -10,14 +10,14 @@ classification: 8
 mitreattack:
 
 logsource:
-      product: windows
-      service: sysmon
+    product: windows
+    service: sysmon
 detection:
-      selection:
-          EventID: 13
-          TargetObject:
-              - '*\Microsoft\Windows\CurrentVersion\Run*'
-          Details:
-              - '*wscript.exe *'
-      condition: selection
+    selection:
+        EventID: 13
+        TargetObject:
+            - '*\Microsoft\Windows\CurrentVersion\Run*'
+        Details:
+            - '*wscript.exe *'
+    condition: selection
 level: critical

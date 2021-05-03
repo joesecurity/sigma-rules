@@ -7,8 +7,8 @@ threatname:
 behaviorgroup: 1
 classification: 7
 logsource:
-      service: sysmon
-      product: windows
+    service: sysmon
+    product: windows
 detection:
     selection:
         EventID: 11

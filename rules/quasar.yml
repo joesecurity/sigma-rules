@@ -1,12 +1,12 @@
-title: Decode DLL Via Certutil
+title: Quasar
 status: experimental
-description: Decode DLL Via Certutil
+description: Quasar
 author: Joe Security
-date: 2020-12-25
-id: 200094
-threatname:
-behaviorgroup: 1
-classification: 8
+date: 2020-12-28
+id: 200095
+threatname: Quasar
+behaviorgroup: 14,20,21,22
+classification: 4
 mitreattack: 
 
 logsource:
@@ -15,6 +15,6 @@ logsource:
 detection:
     selection:
         CommandLine:
-            - '*certutil*-decodehex*.dll*'
+            - '*schtasks*quasar client*'
     condition: selection
 level: critical

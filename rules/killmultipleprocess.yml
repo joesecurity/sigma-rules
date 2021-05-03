@@ -10,11 +10,11 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*cmd*taskkill /f*& taskkill /f*& taskkill /f*& taskkill /f*& taskkill /f*& taskkill /f*& taskkill /f*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*cmd*taskkill /f*& taskkill /f*& taskkill /f*& taskkill /f*& taskkill /f*& taskkill /f*& taskkill /f*'
+    condition: selection
 level: critical

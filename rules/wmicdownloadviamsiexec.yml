@@ -10,11 +10,11 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*wmic process call create *msiexec *http*'
-      condition: selection
+    selection: 
+        CommandLine:
+            - '*wmic process call create *msiexec *http*'
+    condition: selection
 level: critical

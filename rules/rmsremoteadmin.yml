@@ -10,12 +10,11 @@ classification: 4
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*hkcu\software\tektonit\remote manipulator system\host*'              
-          
-      condition: selection
+    selection:
+        CommandLine:
+            - '*hkcu\software\tektonit\remote manipulator system\host*'
+    condition: selection
 level: critical

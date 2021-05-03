@@ -10,13 +10,13 @@ classification: 8
 mitreattack: 
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*bitsadmin /transfer*http*start %APPDATA%*'
-              - '*/transfer*http*.dll&& rundll32*'
-              - '*powershell*start-bitstransfer*start-process*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*bitsadmin /transfer*http*start %APPDATA%*'
+            - '*/transfer*http*.dll&& rundll32*'
+            - '*powershell*start-bitstransfer*start-process*'
+    condition: selection
 level: critical

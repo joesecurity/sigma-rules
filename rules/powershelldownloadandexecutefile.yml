@@ -10,13 +10,13 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*\powershell*DownloadFile((*),$*))*start-process $*'
-              - '*.downloadfile*start-process*'
-              - '*invoke-expression(new-object net.webclient*.invoke*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*\powershell*DownloadFile((*),$*))*start-process $*'
+            - '*.downloadfile*start-process*'
+            - '*invoke-expression(new-object net.webclient*.invoke*'
+    condition: selection
 level: critical

@@ -11,12 +11,12 @@ mitreattack: T1055
 matchonlyifnot: 184
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          ParentImage: '*\Program Files\Microsoft Office*.EXE'
-          CommandLine:
-              -'*\powershell.exe* -enco *'
-      condition: selection
+    selection:
+        ParentImage: '*\Program Files\Microsoft Office*.EXE'
+        CommandLine:
+            -'*\powershell.exe* -enco *'
+    condition: selection
 level: critical

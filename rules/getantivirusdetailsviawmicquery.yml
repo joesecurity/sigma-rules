@@ -10,11 +10,11 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:
-          CommandLine:
-              -'*wmic * path antivirusproduct get displayname*'
-      condition: selection
+    selection:
+        CommandLine:
+            -'*wmic * path antivirusproduct get displayname*'
+    condition: selection
 level: critical

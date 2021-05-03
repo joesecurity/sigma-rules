@@ -10,11 +10,11 @@ classification: 4
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*schtasks*/Create*/XML*\Temp\\*.tmp*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*schtasks*/Create*/XML*\Temp\\*.tmp*'
+    condition: selection
 level: critical

@@ -7,14 +7,14 @@ id: 200022
 threatname:
 behaviorgroup: 2
 classification: 4
-mitreattack: T1060
+mitreattack: T1547.001
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*reg add *\Software\Microsoft\Windows\CurrentVersion\Run /v *\AppData\Roaming\\*.jar*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*reg add *\Software\Microsoft\Windows\CurrentVersion\Run /v *\AppData\Roaming\\*.jar*'
+    condition: selection
 level: critical

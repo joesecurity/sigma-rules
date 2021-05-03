@@ -7,15 +7,15 @@ id: 200016
 threatname:
 behaviorgroup: 2
 classification: 8
-mitreattack: T1117
+mitreattack: T1218.010
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*\system32\regsvr32.EXE /s /n /u /i:*\AppData\Roaming\\* scrobj*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*\system32\regsvr32.EXE /s /n /u /i:*\AppData\Roaming\\* scrobj*'
+    condition: selection
 level: critical
 

@@ -8,18 +8,18 @@ threatname:
 behaviorgroup: 25
 classification: 7
 logsource:
-      service: sysmon
-      product: windows
+    service: sysmon
+    product: windows
 detection:
     selection:
         EventID: 11
         Image: '*\EQUATION\EQNEDT32.EXE*'
         TargetFilename:
-			- '*\\*.exe*'
-			- '*\\*.dll*'
-			- '*\\*.vbs*'
-			- '*\\*.js*'
-			- '*\\*.hta*'
-			- '*\\*.bat*'
+            - '*\\*.exe*'
+            - '*\\*.dll*'
+            - '*\\*.vbs*'
+            - '*\\*.js*'
+            - '*\\*.hta*'
+            - '*\\*.bat*'
     condition: selection
 level: critical

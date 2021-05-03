@@ -8,12 +8,12 @@ threatname:
 behaviorgroup: 2
 classification: 8
 logsource:
-      service: sysmon
-      product: windows
+    service: sysmon
+    product: windows
 detection:
     selection:
         EventID: 11
         TargetFilename:
-            - '*\appdata\roaming\microsoft\\*\startup\\*.wll*'            
+            - '*\appdata\roaming\microsoft\\*\startup\\*.wll*'
     condition: selection
 level: critical

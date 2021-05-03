@@ -8,14 +8,13 @@ threatname: Remcos
 behaviorgroup: 14,20,21,22
 classification: 4
 logsource:
-      service: sysmon
-      product: windows
+    service: sysmon
+    product: windows
 detection:
     selection:
         EventID: 11
         TargetFilename:
             - '*\AppData\Roaming\remcos\logs*.dat*'
-		    
     selection1:
         EventID: 13
         TargetObject:

@@ -10,32 +10,31 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*rundll32*.html,DllRegisterServer*'
-              - '*rundll32*.htm,DllRegisterServer*'
-              - '*rundll32*.txt,DllRegisterServer*'
-              - '*rundll32*.png,DllRegisterServer*'
-              - '*rundll32*.jpeg,DllRegisterServer*'
-              - '*rundll32*.jpg,DllRegisterServer*'              
-              - '*rundll32 c:\programdata\\*.pdf*'
-              - '*rundll32 c:\programdata\\*.txt*'
-              - '*rundll32 c:\programdata\\*.jpg*'
-              - '*rundll32 c:\programdata\\*.png*'
-              - '*rundll32 c:\programdata\\*.jpeg*'
-              - '*rundll32 c:\users\public\\*.pdf*'
-              - '*rundll32 c:\users\public\\*.txt*'
-              - '*rundll32 c:\users\public\\*.jpg*'
-              - '*rundll32 c:\users\public\\*.png*'
-              - '*rundll32 c:\users\public\\*.jpeg*'
-              - '*rundll32*\\*.pdf*'
-              - '*rundll32*\\*.txt*'
-              - '*rundll32*\\*.jpg*'
-              - '*rundll32*\\*.png*'
-              - '*rundll32*\\*.jpeg*'
-              
-      condition: selection
+    selection:
+        CommandLine:
+            - '*rundll32*.html,DllRegisterServer*'
+            - '*rundll32*.htm,DllRegisterServer*'
+            - '*rundll32*.txt,DllRegisterServer*'
+            - '*rundll32*.png,DllRegisterServer*'
+            - '*rundll32*.jpeg,DllRegisterServer*'
+            - '*rundll32*.jpg,DllRegisterServer*'
+            - '*rundll32 c:\programdata\\*.pdf*'
+            - '*rundll32 c:\programdata\\*.txt*'
+            - '*rundll32 c:\programdata\\*.jpg*'
+            - '*rundll32 c:\programdata\\*.png*'
+            - '*rundll32 c:\programdata\\*.jpeg*'
+            - '*rundll32 c:\users\public\\*.pdf*'
+            - '*rundll32 c:\users\public\\*.txt*'
+            - '*rundll32 c:\users\public\\*.jpg*'
+            - '*rundll32 c:\users\public\\*.png*'
+            - '*rundll32 c:\users\public\\*.jpeg*'
+            - '*rundll32*\\*.pdf*'
+            - '*rundll32*\\*.txt*'
+            - '*rundll32*\\*.jpg*'
+            - '*rundll32*\\*.png*'
+            - '*rundll32*\\*.jpeg*'
+    condition: selection
 level: critical

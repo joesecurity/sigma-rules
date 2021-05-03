@@ -10,12 +10,12 @@ classification: 1
 mitreattack: 
 
 logsource:
-      service: sysmon
-      product: windows
+    service: sysmon
+    product: windows
 detection:
-      selection:
-          EventID: 3
-          DestinationPort: '587'
-          Image: '*\Microsoft.NET\\*MSBuild.exe*'
-      condition: selection
+    selection:
+        EventID: 3
+        DestinationPort: '587'
+        Image: '*\Microsoft.NET\\*MSBuild.exe*'
+    condition: selection
 level: critical

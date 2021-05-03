@@ -10,11 +10,11 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:
-          CommandLine:
-              - '*(gp hkcu:\software).*)|iex*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*(gp hkcu:\software).*)|iex*'
+    condition: selection
 level: critical

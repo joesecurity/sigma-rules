@@ -10,14 +10,14 @@ classification: 4
 mitreattack: T1053
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*\schtasks.exe* /create *wscript /E:vbscript *\AppData\Roaming\\*'
-              - '*schtasks /create *\appdata\roaming\\*.vbs*'
-              - '*schtasks /create *\appdata\roaming\\*.js*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*\schtasks.exe* /create *wscript /E:vbscript *\AppData\Roaming\\*'
+            - '*schtasks /create *\appdata\roaming\\*.vbs*'
+            - '*schtasks /create *\appdata\roaming\\*.js*'
+    condition: selection
 level: critical
 

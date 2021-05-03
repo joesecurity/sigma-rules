@@ -10,11 +10,11 @@ classification: 7
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*\windows\microsoft.net\framework*\csc.exe*/noconfig /fullpaths*\appdata\local\temp*'
-      condition: selection
+    selection:      
+        CommandLine:
+            - '*\windows\microsoft.net\framework*\csc.exe*/noconfig /fullpaths*\appdata\local\temp*'
+    condition: selection
 level: critical

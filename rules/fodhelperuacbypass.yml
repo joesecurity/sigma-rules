@@ -10,11 +10,11 @@ classification: 7
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*reg add*hkcu\software\classes\ms-settings\shell\open\command*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*reg add*hkcu\software\classes\ms-settings\shell\open\command*'
+    condition: selection
 level: critical

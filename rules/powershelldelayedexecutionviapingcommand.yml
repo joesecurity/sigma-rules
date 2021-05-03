@@ -10,11 +10,11 @@ classification: 8
 mitreattack:
 
 logsource:
-      category: process_creation
-      product: windows
+    category: process_creation
+    product: windows
 detection:
-      selection:      
-          CommandLine:
-              - '*ping -n * & powershell.exe -executionpolicy bypass -noninteractive -windowstyle hidden*'
-      condition: selection
+    selection:
+        CommandLine:
+            - '*ping -n * & powershell.exe -executionpolicy bypass -noninteractive -windowstyle hidden*'
+    condition: selection
 level: critical
