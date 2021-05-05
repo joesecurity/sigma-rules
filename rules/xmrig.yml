@@ -20,5 +20,6 @@ detection:
             - '*stratum+tcp://*'
             - '*--algo=cn*-o * -u *'
             - '*--coin=monero --*'
+            - '*-o pool.*--nicehash*'
     condition: selection
 level: critical
