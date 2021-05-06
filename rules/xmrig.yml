@@ -21,5 +21,6 @@ detection:
             - '*--algo=cn*-o * -u *'
             - '*--coin=monero --*'
             - '*-o pool.*--nicehash*'
+            - '*--pool stratum:*'
     condition: selection
 level: critical

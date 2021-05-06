@@ -1,0 +1,35 @@
+title: Schedule system process
+status: experimental
+description: Schedule system process
+author: Joe Security
+date: 2021-05-06
+id: 200101
+threatname:
+behaviorgroup: 2
+classification: 8
+mitreattack: 
+
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine:
+            - '*schtasks /create*svchost*'
+            - '*schtasks /create*rundll32*'
+            - '*schtasks /create*powershell*'
+            - '*schtasks /create*regsvr32*'
+            - '*schtasks /create*spoolsv*'
+            - '*schtasks /create*lsass*'
+            - '*schtasks /create*smss*'
+            - '*schtasks /create*csrss*'
+            - '*schtasks /create*conhost*'
+            - '*schtasks /create*wininit*'
+            - '*schtasks /create*winlogon*'
+            - '*schtasks /create*taskhost*'
+            - '*schtasks /create*Taskmgr*'
+            - '*schtasks /create*RuntimeBroker*'
+            - '*schtasks /create*smartscreen*'
+            - '*schtasks /create*dllhost*'
+    condition: selection
+level: critical
