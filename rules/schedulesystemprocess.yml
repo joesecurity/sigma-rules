@@ -7,7 +7,7 @@ id: 200101
 threatname:
 behaviorgroup: 2
 classification: 8
-mitreattack: 
+mitreattack:
 
 logsource:
     category: process_creation

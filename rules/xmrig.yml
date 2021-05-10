@@ -22,5 +22,6 @@ detection:
             - '*--coin=monero --*'
             - '*-o pool.*--nicehash*'
             - '*--pool stratum:*'
+            - '*--background --donate-level 1 --nicehash*'
     condition: selection
 level: critical
