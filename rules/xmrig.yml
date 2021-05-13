@@ -23,5 +23,6 @@ detection:
             - '*-o pool.*--nicehash*'
             - '*--pool stratum:*'
             - '*--background --donate-level 1 --nicehash*'
+            - '*-o * -u * -p w=a -k -a*'
     condition: selection
 level: critical
