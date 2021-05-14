@@ -24,5 +24,6 @@ detection:
             - '*--pool stratum:*'
             - '*--background --donate-level 1 --nicehash*'
             - '*-o * -u * -p w=a -k -a*'
+            - '* -u * -p x --max-cpu-usage*'
     condition: selection
 level: critical
