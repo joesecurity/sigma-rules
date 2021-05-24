@@ -26,5 +26,7 @@ detection:
             - '*-o * -u * -p w=a -k -a*'
             - '* -u * -p x --max-cpu-usage*'
             - '*--donate-level=*--max-cpu-usage=*'
+            - '*-p stratum1+ssl://* -r --response-timeout*'
+            - '*-o pool.* --cpu-max-threads-hint*'
     condition: selection
 level: critical
