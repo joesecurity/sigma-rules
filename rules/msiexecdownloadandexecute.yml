@@ -19,5 +19,6 @@ detection:
             - '*m^sie^xec /ih^tt^p*>*'
             - '*m^s^ie^xec /ih^tt^p^*'
             - '*msiexec /q/ihttp*'
+            - '*msiexec /i http* /qn*'
     condition: selection
 level: critical
