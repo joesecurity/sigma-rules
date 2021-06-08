@@ -29,5 +29,6 @@ detection:
             - '*-p stratum1+ssl://* -r --response-timeout*'
             - '*-o pool.* --cpu-max-threads-hint*'
             - '*--donate-level * -o pool.*'
+            - '*--cpu-memory-pool=*--donate-level=*'
     condition: selection
 level: critical
