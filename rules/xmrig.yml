@@ -30,5 +30,6 @@ detection:
             - '*-o pool.* --cpu-max-threads-hint*'
             - '*--donate-level * -o pool.*'
             - '*--cpu-memory-pool=*--donate-level=*'
+            - '*--pool=stratum:*--cinit-max-gpu=*'
     condition: selection
 level: critical
