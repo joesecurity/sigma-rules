@@ -32,5 +32,6 @@ detection:
             - '*--cpu-memory-pool=*--donate-level=*'
             - '*--pool=stratum:*--cinit-max-gpu=*'
             - '*-o xmr.* -u * -p*'
+            - '*-epool * -ewal * -worker*'
     condition: selection
 level: critical
