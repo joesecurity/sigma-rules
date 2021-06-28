@@ -15,6 +15,6 @@ logsource:
 detection:
     selection:
         CommandLine:
-            - '*schtasks*/Create*/XML*\Temp\\*.tmp*'
+            - '*schtasks*/create*/xml*\temp\\*.tmp*'
     condition: selection
 level: critical
