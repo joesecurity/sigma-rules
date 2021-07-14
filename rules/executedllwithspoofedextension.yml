@@ -36,5 +36,6 @@ detection:
             - '*rundll32*\\*.jpg*'
             - '*rundll32*\\*.png*'
             - '*rundll32*\\*.jpeg*'
+            - '*rundll32*\\*.dat*'
     condition: selection
 level: critical
