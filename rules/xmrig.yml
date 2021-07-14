@@ -35,5 +35,6 @@ detection:
             - '*-epool * -ewal * -worker*'
             - '*-o * -u * --donate-level=*'
             - '*--cinit-find-e --pool=stratums://*'
+            - '*-o * -u * -p x -k*'
     condition: selection
 level: critical
