@@ -1,0 +1,20 @@
+title: LimeRAT
+status: experimental
+description: LimeRAT
+author: Joe Security
+date: 2021-07-22
+id: 200102
+threatname: LimeRAT
+behaviorgroup: 14,20,21,22
+classification: 4
+mitreattack:
+
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine:
+            - '*schtasks*limerat*'
+    condition: selection
+level: critical
