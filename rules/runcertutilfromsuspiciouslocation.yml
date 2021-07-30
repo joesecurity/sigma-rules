@@ -16,5 +16,6 @@ detection:
     selection:
         CommandLine:
             - '*c:\programdata\curl.com /urlcache /f http*'
+            - '*programdata\\*.exe -urlcache -f -split http*'
     condition: selection
 level: critical
