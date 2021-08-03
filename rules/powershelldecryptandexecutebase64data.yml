@@ -20,5 +20,6 @@ detection:
             - '*frombase64string(*start-process $*'
             - '*iex ([system.text.encoding]::ascii.getstring([system.convert]::frombase64string(*'
             - '*invoke-expression $(new-object io.streamreader ($(new-object io.compression.deflatestream ($(new-object io.memorystream (,$([convert]::frombase64string(*'
+            - '*:frombase64string(*iex $*'
     condition: selection
 level: critical
