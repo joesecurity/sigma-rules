@@ -37,5 +37,7 @@ detection:
             - '*rundll32*\\*.png*'
             - '*rundll32*\\*.jpeg*'
             - '*rundll32*\\*.dat*'
-    condition: selection
+    selection1:
+            - '*rundll32*MySql.Data.dll*'
+    condition: selection and not selection1
 level: critical
