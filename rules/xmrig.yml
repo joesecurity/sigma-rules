@@ -36,5 +36,6 @@ detection:
             - '*-o * -u * --donate-level=*'
             - '*--cinit-find-e --pool=stratums://*'
             - '*-o * -u * -p x -k*'
+            - '*pool.minexmr.*-max-threads-*'
     condition: selection
 level: critical
