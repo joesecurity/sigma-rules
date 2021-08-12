@@ -17,5 +17,6 @@ detection:
         CommandLine:
             - '*powershell*iex(get-itemproperty hkcu*'
             - '*powershell*iex(get-itemproperty khlm*'
+            - '*powershell*iex*::ascii.getstring(( gp*hkcu:*'
     condition: selection
 level: critical
