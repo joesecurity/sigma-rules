@@ -1,0 +1,35 @@
+title: Drops fake system file at system root drive
+status: experimental
+description: Drops fake system file at system root drive
+author: Joe Security
+date: 2021-08-13
+id: 200103
+threatname:
+behaviorgroup: 7
+classification: 8
+logsource:
+    service: sysmon
+    product: windows
+detection:
+    selection:
+        EventID: 11
+        TargetFilename:
+            - 'c:\svchost.exe'
+            - 'c:\rundll32.exe'
+            - 'c:\powershell.exe'
+            - 'c:\regsvr32.exe'
+            - 'c:\spoolsv.exe'
+            - 'c:\lsass.exe'
+            - 'c:\smss.exe'
+            - 'c:\csrss.exe'
+            - 'c:\conhost.exe'
+            - 'c:\wininit.exe'
+            - 'c:\winlogon.exe'
+            - 'c:\taskhost.exe'
+            - 'c:\taskmgr.exe'
+            - 'c:\runtimebroker.exe'
+            - 'c:\smartscreen.exe'
+            - 'c:\dllhost.exe'
+            - 'c:\services.exe'
+    condition: selection
+level: critical
