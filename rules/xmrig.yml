@@ -37,5 +37,6 @@ detection:
             - '*--cinit-find-e --pool=stratums://*'
             - '*-o * -u * -p x -k*'
             - '*pool.minexmr.*-max-threads-*'
+            - '*--cinit-find-*.nanopool.*'
     condition: selection
 level: critical
