@@ -38,5 +38,6 @@ detection:
             - '*-o * -u * -p x -k*'
             - '*pool.minexmr.*-max-threads-*'
             - '*--cinit-find-*.nanopool.*'
+            - '*--cinit-find-*--url=*'
     condition: selection
 level: critical
