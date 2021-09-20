@@ -39,5 +39,6 @@ detection:
             - '*pool.minexmr.*-max-threads-*'
             - '*--cinit-find-*.nanopool.*'
             - '*--cinit-find-*--url=*'
+            - '*--url pool* --donate-level*'
     condition: selection
 level: critical
