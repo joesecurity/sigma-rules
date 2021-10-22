@@ -35,10 +35,11 @@ detection:
             - '*-epool * -ewal * -worker*'
             - '*-o * -u * --donate-level=*'
             - '*--cinit-find-e --pool=stratums://*'
-            - '*-o * -u * -p x -k*'
+            - '*-o * -u * -p x *'
             - '*pool.minexmr.*-max-threads-*'
             - '*--cinit-find-*.nanopool.*'
             - '*--cinit-find-*--url=*'
             - '*--url pool* --donate-level*'
+            
     condition: selection
 level: critical
