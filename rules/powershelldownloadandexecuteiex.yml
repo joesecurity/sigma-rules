@@ -29,5 +29,6 @@ detection:
             - '*iex ((new-object system.net.webclient).downloadstring(*'
             - '*powershell*.webclient)*iex*'
             - '*iex(new-object net.webclient).downloadstring(*'
+            - '*iex ((new-object net.webclient).downloadstring(*'
     condition: selection
 level: critical
