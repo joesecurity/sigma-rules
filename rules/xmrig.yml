@@ -41,6 +41,7 @@ detection:
             - '*--cinit-find-*--url=*'
             - '*--url pool* --donate-level*'
             - '*--user *--donate-level*'
+            - '*-p w=Rig -a cn-heavy/xhv -k -o*'
             
     condition: selection
 level: critical
