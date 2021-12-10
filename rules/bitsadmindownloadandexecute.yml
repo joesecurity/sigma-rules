@@ -18,5 +18,6 @@ detection:
             - '*bitsadmin /transfer*http*start %APPDATA%*'
             - '*/transfer*http*.dll&& rundll32*'
             - '*powershell*start-bitstransfer*start-process*'
+            - '*bitsadmin /transfer*|iex*'
     condition: selection
 level: critical
