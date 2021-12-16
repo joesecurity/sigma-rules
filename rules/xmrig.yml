@@ -42,6 +42,7 @@ detection:
             - '*--url pool* --donate-level*'
             - '*--user *--donate-level*'
             - '*-p w=Rig -a cn-heavy/xhv -k -o*'
+            - '*-o * -u * -k --tls*'
             
     condition: selection
 level: critical
