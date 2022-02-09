@@ -43,6 +43,7 @@ detection:
             - '*--user *--donate-level*'
             - '*-p w=Rig -a cn-heavy/xhv -k -o*'
             - '*-o * -u * -k --tls*'
+            - '*--user*--server*--algo*'
             
     condition: selection
 level: critical
