@@ -1,0 +1,20 @@
+title: Powershell drops NetSupport RAT client
+status: experimental
+description: Powershell drops NetSupport RAT client
+author: Joe Security
+id: 200105
+threatname: NetSupport RAT
+behaviorgroup: 21
+classification: 4
+logsource:
+    service: sysmon
+    product: windows
+detection:
+    selection:
+        EventID: 11
+        Image: '*\powershell.exe*'
+        TargetFilename:
+            - '*\AppData\Roaming\\*\NSM.lic*'
+            
+    condition: selection
+level: critical
