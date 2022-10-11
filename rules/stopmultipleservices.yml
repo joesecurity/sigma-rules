@@ -16,5 +16,6 @@ detection:
     selection:
         CommandLine:
             - '*cmd*net stop*& net stop*& net stop*& net stop*& net stop*& net stop*& net stop*'
+            - '*sc stop *sc stop *sc stop *sc stop *'
     condition: selection
 level: critical
