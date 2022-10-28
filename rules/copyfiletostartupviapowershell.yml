@@ -1,0 +1,20 @@
+title: Copy file to startup via Powershell
+status: experimental
+description: Copy file to startup via Powershell
+author: Joe Security
+date: 2022-10-28
+id: 200106
+threatname:
+behaviorgroup: 2
+classification: 1
+mitreattack:
+
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine:
+            - '*copy-item *\roaming\microsoft\windows\start menu\programs\startup*'
+    condition: selection
+level: critical
