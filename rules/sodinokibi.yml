@@ -1,0 +1,22 @@
+title: Sodinokibi
+status: experimental
+description: Sodinokibi random extension key
+author: Joe Security
+date: 2022-11-02
+id: 200107
+threatname: Sodinokibi
+behaviorgroup: 15
+classification: 0
+mitreattack:
+
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        EventID: 13
+        TargetObject:
+            - '*recfg*rnd_ext*'
+    condition: selection
+level: critical
+
