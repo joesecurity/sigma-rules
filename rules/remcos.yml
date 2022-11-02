@@ -20,5 +20,6 @@ detection:
         EventID: 13
         TargetObject:
             - '*\Software\Remcos*exepath*'
+            - '*\Software\Rmc-*exepath*'
     condition: selection or selection1
 level: critical
