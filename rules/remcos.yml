@@ -21,5 +21,6 @@ detection:
         TargetObject:
             - '*\Software\Remcos*exepath*'
             - '*\Software\Rmc-*exepath*'
+            - '*\microsoft\windows\currentversion\run*remcos*'
     condition: selection or selection1
 level: critical
