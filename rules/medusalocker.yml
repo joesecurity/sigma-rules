@@ -1,0 +1,22 @@
+title: MedusaLocker
+status: experimental
+description: MedusaLocker key
+author: Joe Security
+date: 2022-11-11
+id: 200108
+threatname: MedusaLocker
+behaviorgroup: 15
+classification: 0
+mitreattack:
+
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        EventID: 13
+        TargetObject:
+            - '*\Software\MDSLK*Self*'
+    condition: selection
+level: critical
+
