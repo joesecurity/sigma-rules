@@ -30,5 +30,6 @@ detection:
             - '*powershell*.webclient)*iex*'
             - '*iex(new-object net.webclient).downloadstring(*'
             - '*iex ((new-object net.webclient).downloadstring(*'
+            - '*http*.replace(*iex*'
     condition: selection
 level: critical
