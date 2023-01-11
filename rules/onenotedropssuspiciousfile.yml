@@ -1,0 +1,25 @@
+title: ONENOTE drops suspicious file
+status: experimental
+description: ONENOTE drops suspicious file
+author: Joe Security
+date: 2023-01-11
+id: 200109
+threatname:
+behaviorgroup: 1
+classification: 7
+logsource:
+    service: sysmon
+    product: windows
+detection:
+    selection:
+        EventID: 11
+        Image: '*\microsoft office\root\office*\onenote.exe'
+        TargetFilename:
+            - '*\exported*\\*.hta'
+            - '*\exported*\\*.lnk'
+            - '*\exported*\\*.vbs'
+            - '*\exported*\\*.js'
+            - '*\exported*\\*.bat'
+            
+    condition: selection
+level: critical
