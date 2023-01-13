@@ -13,13 +13,19 @@ logsource:
 detection:
     selection:
         EventID: 11
-        Image: '*\microsoft office\root\office*\onenote.exe'
+        Image:
+            - '*\microsoft office\root\office*\onenote.exe'
+            - '*\microsoft office\office*\onenote.exe'
         TargetFilename:
             - '*\exported*\\*.hta'
             - '*\exported*\\*.lnk'
             - '*\exported*\\*.vbs'
             - '*\exported*\\*.js'
             - '*\exported*\\*.bat'
+            - '*\onenoteofflinecache_files\\*.hta'            
+            - '*\onenoteofflinecache_files\\*.vbs'
+            - '*\onenoteofflinecache_files\\*.js'
+            - '*\onenoteofflinecache_files\\*.bat'
             
     condition: selection
 level: critical
