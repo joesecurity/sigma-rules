@@ -1,0 +1,18 @@
+title: Set autostart key via New-ItemProperty Cmdlet  
+status: experimental
+description: Set autostart key via New-ItemProperty Cmdlet
+author: Joe Security
+date: 2023-03-21
+id: 200110
+threatname:
+behaviorgroup: 2
+classification: 4
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine:
+            - '*new-itemproperty -path *\software\microsoft\windows\currentversion\run*'
+    condition: selection
+level: critical
