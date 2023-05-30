@@ -1,0 +1,18 @@
+title: Set custom UserAgent and download file via Powershell 
+status: experimental
+description: Set Custom UserAgent and download file via Powershell
+author: Joe Security
+date: 2023-05-30
+id: 200111
+threatname:
+behaviorgroup: 1
+classification: 8
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine:
+            - '*user-agent*.downloadfile(*'
+    condition: selection
+level: critical
