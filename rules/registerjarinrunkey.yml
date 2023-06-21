@@ -16,5 +16,6 @@ detection:
     selection:
         CommandLine:
             - '*reg add *\Software\Microsoft\Windows\CurrentVersion\Run /v *\AppData\Roaming\\*.jar*'
+            - '*reg add *\software\microsoft\windows\currentversion\run /v *javaw.exe -jar*'
     condition: selection
 level: critical
