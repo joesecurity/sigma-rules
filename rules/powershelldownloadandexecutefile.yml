@@ -18,5 +18,6 @@ detection:
             - '*\powershell*DownloadFile((*),$*))*start-process $*'
             - '*.downloadfile*start-process*'
             - '*invoke-expression(new-object net.webclient*.invoke*'
+            - '*powershell iwr http*start-process*'
     condition: selection
 level: critical
