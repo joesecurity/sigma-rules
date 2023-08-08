@@ -27,7 +27,7 @@ detection:
             - '* -u * -p x --max-cpu-usage*'
             - '*--donate-level=*--max-cpu-usage=*'
             - '*-p stratum1+ssl://* -r --response-timeout*'
-            - '*-o pool.* --cpu-max-threads-hint*'
+            - '*-o * --cpu-max-threads-hint*'
             - '*--donate-level * -o pool.*'
             - '*--cpu-memory-pool=*--donate-level=*'
             - '*--pool=stratum:*--cinit-max-gpu=*'
