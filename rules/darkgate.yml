@@ -1,0 +1,21 @@
+title: DarkGate
+status: experimental
+description: DarkGate Downloader 
+author: Joe Security
+date: 2023-09-21
+id: 200112
+threatname:
+behaviorgroup: 20
+classification: 4
+mitreattack: 
+
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine:
+            - '*copy c:\windows\system32\curl.exe *user-agent: curl* -o autoit3.exe*'            
+            
+    condition: selection
+level: critical
