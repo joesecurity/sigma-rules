@@ -15,7 +15,8 @@ logsource:
 detection:
     selection:
         CommandLine:
-            - '*copy c:\windows\system32\curl.exe *user-agent: curl* -o autoit3.exe*'            
+            - '*copy c:\windows\system32\curl.exe *user-agent: curl* -o autoit3.exe*'
+            - '*curl -o autoit3.exe http* & curl -o *.au3 http*'            
             
     condition: selection
 level: critical
