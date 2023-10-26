@@ -16,7 +16,8 @@ detection:
     selection:
         CommandLine:
             - '*copy c:\windows\system32\curl.exe *user-agent: curl* -o autoit3.exe*'
-            - '*curl -o autoit3.exe http* & curl -o *.au3 http*'            
+            - '*curl -o autoit3.exe http* & curl -o *.au3 http*'
+            - "*Invoke-WebRequest -Uri *-OutFile 'AutoIt3.exe' *Invoke-WebRequest -Uri *-OutFile '*.au3'*"
             
     condition: selection
 level: critical
