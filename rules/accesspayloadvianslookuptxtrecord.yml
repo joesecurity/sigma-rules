@@ -1,0 +1,21 @@
+title: Access payload via nslookup txt record
+status: experimental
+description: Access payload via nslookup txt record
+author: Joe Security
+date: 2023-12-14
+id: 200113
+threatname:
+behaviorgroup: 20
+classification: 4
+mitreattack: 
+
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine:
+            - '*nslookup -type=txt * | findstr*'            
+            
+    condition: selection
+level: critical
