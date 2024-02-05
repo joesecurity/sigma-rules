@@ -17,4 +17,4 @@ detection:
         CommandLine:
             - '*\windows\microsoft.net\framework*\csc.exe*/noconfig /fullpaths*\appdata\local\temp*'
     condition: selection
-level: critical
+level: high
