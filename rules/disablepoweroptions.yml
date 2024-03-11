@@ -1,0 +1,28 @@
+title: Disable power options
+status: experimental
+description: Disable power options
+author: Joe Security
+date: 2024-03-11
+id: 200114
+threatname:
+behaviorgroup: 31
+classification: 8
+mitreattack: 
+
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine:
+            - '*powercfg.exe /x -monitor-timeout-ac 0'
+            - '*powercfg.exe /x -monitor-timeout-dc 0'
+            - '*powercfg.exe /x -disk-timeout-ac 0'
+            - '*powercfg.exe /x -disk-timeout-dc 0'
+            - '*powercfg.exe /x -standby-timeout-ac 0'
+            - '*powercfg.exe /x -standby-timeout-dc 0'
+            - '*powercfg.exe /x -hibernate-timeout-ac 0'
+            - '*powercfg.exe /x -hibernate-timeout-dc 0'           
+            
+    condition: selection
+level: critical

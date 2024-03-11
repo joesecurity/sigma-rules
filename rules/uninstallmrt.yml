@@ -1,0 +1,21 @@
+title: Uninstall MRT(Malicious Software Removal Tool)
+status: experimental
+description: Uninstall MRT(Malicious Software Removal Tool)
+author: Joe Security
+date: 2024-03-11
+id: 200115
+threatname:
+behaviorgroup: 7
+classification: 8
+mitreattack: 
+
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine:
+            - '*wusa /uninstall /kb:890830 /quiet'            
+            
+    condition: selection
+level: critical
