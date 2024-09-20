@@ -15,10 +15,10 @@ logsource:
 detection:
     selection:
         CommandLine:
-            - 'findstr*avastui.exe*'
-            - 'findstr*avgui.exe*'
-            - 'findstr*nswscsvc.exe*'
-            - 'findstr*sophoshealth.exe*'
+            - 'findstr*avastui*'
+            - 'findstr*avgui*'
+            - 'findstr*nswscsvc*'
+            - 'findstr*sophoshealth*'
             
     condition: selection
 level: critical
