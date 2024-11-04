@@ -1,0 +1,30 @@
+title: Paste sharing url in reverse order
+status: experimental
+description: Paste sharing url in reverse order
+author: Joe Security
+date: 2024-11-04
+id: 200119
+threatname:
+behaviorgroup: 12
+classification: 1
+mitreattack: 
+
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine:
+            - '*moc.nibetsap//:sptth*'
+            - '*moc.nibetsah//:sptth*'
+            - '*moc.buhtig.tsig//:sptth*'
+            - '*ten.nibetavirp//:sptth*'
+            - '*ten.nib0//:sptth*'
+            - '*gro.etsapd//:sptth*'
+            - '*ti.etsaptusj//:sptth*'
+            - '*moc.nibtsohg//:sptth*'
+            - '*ee.etsap//:sptth*'
+            - '*oc.yrtner//:sptth*'
+            
+    condition: selection
+level: critical
